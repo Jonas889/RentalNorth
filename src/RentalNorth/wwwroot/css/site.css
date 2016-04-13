@@ -1,6 +1,9 @@
-﻿body {
-    padding-top: 50px;
+﻿@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+body {
+    padding-top: 20px;
     padding-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Wrapping element */
@@ -15,6 +18,37 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.navbar-right {
+    margin-right: 5px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-text {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+.jumbotron {
+    background-color: #eee;
+    border: 1px solid #666;
+    padding-top: 15px;
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+  border-radius: 10px;
 }
 
 /* Carousel */
@@ -32,3 +66,4 @@ textarea {
         z-index: 10 !important;
     }
 }
+

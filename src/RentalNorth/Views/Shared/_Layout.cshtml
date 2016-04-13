@@ -1,25 +1,27 @@
 ﻿<!DOCTYPE html>
 <html ng-app="rentalNorth">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - RentalNorth</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RentalNorth</title>
 
-        <environment names="Development">
-            <script src="~/js/angular.min.js"></script>
-            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-            <link rel="stylesheet" href="~/css/site.css" />
-            <script src="~/lib/jquery/dist/jquery.js"></script>
-        </environment>
-        <environment names="Staging,Production">
-            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
-                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        </environment>
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <script src="~/js/angular.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <script src="~/js/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    </environment>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-default navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,13 +34,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        <li><a href="~#/home">Hem</a></li>
+                        <li><a href="~#/rent">Hyra stuga</a></li>
+                        <li><a href="~#/renter">Hyra ut stuga</a></li>
+                        <li><a href="~#/about">Om oss</a></li>
+                        <li><a href="~#/contact">Kontakta oss</a></li>
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")
                 </div>
             </div>
+        </div>
         </div>
         <div class="container body-content">
             @RenderBody()
@@ -49,7 +54,7 @@
         </div>
 
         <environment names="Development">
-            @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+            <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>
         </environment>
@@ -66,5 +71,5 @@
         </environment>
 
         @RenderSection("scripts", required: false)
-    </body>
+</body>
 </html>
