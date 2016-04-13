@@ -40,6 +40,17 @@ textarea {
   color: #fff;
 }
 
+.jumbotron {
+    background-color: #eee;
+    border: 1px solid #666;
+    padding-top: 15px;
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+  border-radius: 10px;
+}
+
 /* Carousel */
 .carousel-caption {
     z-index: 10 !important;
