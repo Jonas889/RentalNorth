@@ -1,0 +1,47 @@
+﻿<style>
+    #map {
+        margin:auto;
+        height: 600px;
+        width: 100%px;
+        /*height:auto;
+        width:auto;*/
+    }
+
+    .infoWindowContent {
+        font-size: 14px !important;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+</style>
+<div class="jumbotron" ng-controller="homeController">
+    <div class="container text-center">
+        <h1>Välkommen!</h1>
+        <form class="form-inline">
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="Var vill du hyra stuga?">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">Var?</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+        <br />
+        <div id="map"></div>
+        <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+            <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+        </div>
+    </div>
+</div>
+
+
+<!--
+        <div id="map" style="height:100%; width:auto"></div>
+        <div ng-repeat="cabin in markers">{{cabin.Title}} {{cabin.Lng}} {{cabin.Lat}} {{cabin.InfoWindow}}</div>
+    </div>
+</div>-->

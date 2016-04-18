@@ -22,15 +22,24 @@ namespace RentalNorth.Controllers
         // GET: /<controller>/
         public string AllCabins()
         {
-            var model = JsonConvert.SerializeObject(context.Cabins.Select(c => new CabinMarkerVM
+            var model = context.Cabins.Select(c => new CabinMarkerVM
             {
                 Title = c.Title,
                 Lat = c.Lat,
-                lng = c.Long,
+                Lng = c.Long,
                 InfoWindow = c.InfoWindow
                 
-            }).ToArray());
-            return model;
+            }).ToList();
+           
+
+            dynamic modelWrapper = new
+            {
+
+                cabin = model
+
+            };
+
+            return JsonConvert.SerializeObject(modelWrapper);
         }
     }
 }

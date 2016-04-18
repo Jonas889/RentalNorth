@@ -13,7 +13,7 @@ namespace RentalNorth.ViewModels.Api
         //"description": 'Sanjay Gandhi National Park is a large protected area in the northern part of Mumbai city.'
         public string Title { get; set; }
         public double Lat { get; set; }
-        public double lng { get; set; }
+        public double Lng { get; set; }
         public string InfoWindow { get; set; }
     }
 }

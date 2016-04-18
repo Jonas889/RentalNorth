@@ -6,7 +6,7 @@
 
 <p>Välkommen till Rental North</p>
 <script>
-    $(document).ready(function () {
+    
         $.getJSON("/api/AllCabins",null, function (cabinsJson) {
             //var obj = JSON.parse(cabinsJson);
             alert(cabinsJson[0].Title + " " + cabinsJson[1].Title);
